@@ -1,0 +1,152 @@
+<DOCTYPE html>
+    <html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Utopia">
+        <meta name="author" content="Kevin , Valérie , Michal , Stef">
+
+        <title> UTOPIA 2.0 </title>
+        <!-- CSS: Bootstrap, stylish portfolio, FA5 -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+        <link rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css">
+
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"              rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Gudea:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Istok+Web&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@400;600&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="../css/style.css">
+
+        <title>Utopia 2.0</title>
+
+    </head>
+
+    <body class="bg-primary">
+    <header class="">
+                <img src="../img/banner.png" alt="logo" class="img-fluid">
+    </header>
+<!--&lt;!&ndash;    over dit spel&ndash;&gt;-->
+<!--    <section id="over" class="content-section pb-5 pt-5 bg-primary">-->
+<!--        <div class="container text-center">-->
+<!--            <div class="content-section-heading text-center">-->
+<!--                <h1 class="mb-0 ">Wat is het?</h1>-->
+<!--                <div class="mb-5 ">-->
+<!--                    <small></small>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </section>-->
+
+<!--    speel spel-->
+    <section id="speelspel" class="content-section pb-5 pt-5 bg-secondary">
+        <div class="container text-center">
+            <div class="content-section-heading text-center">
+                <h1 class="mb-0 ">Speel het spel</h1>
+                <div class="mb-3">
+                    <small>Start het avontuur... </small>
+                </div>
+                <iframe mozallowfullscreen="true" allow="autoplay; fullscreen"  src="https://gokdenizcetin.com/assets/files/pongremix-star-wars/v0.1.2/game/index.html" style="border:0px #000000 none;" name="Pong: Star Wars Remix" scrolling="no" msallowfullscreen="true" allowfullscreen="true" webkitallowfullscreen="true" allowtransparency="true" frameborder="0" marginheight="px" marginwidth="320px" height="540px" width="960px"></iframe>
+            </div>
+        </div>
+    </section>
+
+<!--feedback-->
+    <section id="feedback" class="content-section pb-5 pt-5 bg-primary">
+        <div class="container text-center">
+            <h1 class="mb-0 text-white">Geef feedback</h1>
+            <span th:if="${sendmessage.isEmpty}">
+            <div class="mb-3">
+                <small class="text-white">Deel je ervaring! </small>
+            </div>
+
+            <form action="/sendfeedback" method="post">
+                <label >Deel jouw spelrating  (1 = niet leuk, 5 = heel leuk) </label>
+
+                <div class="d-flex justify-content-around w-100">
+                    <span><input type="radio"  name="score" id="1"  value="1" required>
+                        <label for="1">1</label></span>
+                  <span> <input type="radio" name="score" id="2"  value="2">
+                      <label for="2" >2</label></span>
+                  <span>  <input type="radio" name="score"  id="3"  value="3">
+                      <label for="3">3</label></span>
+                <span>    <input type="radio" name="score"  id="4"  value="4">
+                    <label for="4" >4</label></span>
+                <span>   <input type="radio" name="score" id="5" value="5">
+                    <label for="5">5</label></span>
+            </div>
+
+
+                <p></p>
+                <p></p>
+
+                <p><label for="game">Wat vond je van het spel? Hoe de informatie gebracht wordt?</label> <br>
+                    <textarea class="w-100" rows="5" cols="60" name="game" id="game" placeholder="Typ hier jouw feedback"></textarea>
+                    <br/></p>
+
+                <p></p>
+                <p></p>
+
+                <p><label for="content">Wat vond je van de content?</label> <br>
+                    <textarea class="w-100" rows="5" cols="60" name="content" id="content" placeholder="Typ hier jouw feedback"></textarea>
+                    <br/></p>
+
+                <p></p>
+                <p></p>
+
+                <p><label for="visuals">Wat vond je van de visuals? Sprak de vormgeving jouw aan? </label> <br>
+                    <textarea class="w-100" rows="5" cols="60" name="visuals" id="visuals" placeholder="Typ hier jouw feedback"></textarea>
+                    <br/></p>
+                <p></p>
+                <p></p>
+
+                <p><label for="other">Verder aanvullingen:  </label> <br>
+                    <textarea class="w-100" rows="2" cols="60" name="other" id="other" placeholder="Typ hier jouw feedback"></textarea>
+                    <br/></p>
+
+
+                <p><input type="submit" value="Verzend"/></p>
+            </form>
+    </span>
+
+
+            <div class="mb-3">
+                <small class="text-white" th:text="${sendmessage}"> </small>
+            </div>
+
+                  </div>
+
+    </section>
+
+<!--    footer-->
+    <footer class="footer text-center bg-secondary pb-2 pt-3">
+        <div class="container">
+            <ul class="list-inline ">
+                <li class="list-inline-item">
+                    <a class="" href="https://www.facebook.com/ThomasMoreBE/" target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a class=" " href="https://twitter.com/ThomasMoreBE" target="_blank">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a class="" href="https://www.linkedin.com/company/thomas-more/" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </li>
+            </ul>
+            <p class="text-muted small mb-0">Copyright &copy; weboos 2023</p>
+        </div>
+    </footer>
+
+
+    </body>
+    </html>
+</DOCTYPE>

@@ -1,0 +1,57 @@
+.bg-primary {
+    background-color: #49A078 !important;
+}
+
+/* donker blauw*/
+.bg-secondary {
+    background-color: #FFFCFF !important;
+}
+
+/*wit*/
+.bg-light {
+    background-color: #3870C9 !important;
+}
+
+.bg-dark{
+    background-color: #0D1F2D !important;
+}
+
+.bg-orange{
+    background-color: #BB4430 !important;
+}
+.text-white{
+   color: #FFFCFF !important;
+}
+.text-secondary {
+    color: #0D1F2D !important;
+}
+
+h1,h2,h3{
+    font-family: 'Istok Web', sans-serif;
+    font-size: 35px;
+    line-height: 1.5;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+text-transform: uppercase;
+}
+p{
+    font-family: 'Gudea', sans-serif;
+    font-size: 15px;
+    line-height: 1;
+}
+form{
+    width: 50%;
+    margin: auto;
+}
+
+
+.fab {
+    font-size: 1.4em;
+    width: 1.4em;
+    text-align: center;
+    line-height: 1.4em;
+    background: #0D1F2D;
+    color: #FFFCFF;
+    border-radius: 0.7em; /* or 50% width & line-height */
+
+}
