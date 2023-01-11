@@ -1,21 +1,18 @@
-name: Build and upload binary artifact
+name: Java CI with Maven
 
-on: push
+on:
+  push:
 
 jobs:
-  release:
+  build:
+
     runs-on: ubuntu-latest
     name: Build, package and upload .jar artifact
     steps:
-      - uses: actions/checkout@v1
-      - name: Set up JDK 8
+      - uses: actions/checkout@v2
+      - name: Set up JDK 17
         uses: actions/setup-java@v1
         with:
-          java-version: 8
-      - name: Build and package project
-        run: mvn -f pom.xml package
-      - name: Upload Maven build artifact
-        uses: actions/upload-artifact@v1
-        with:
-          name: artifact
-          path: ./target/spring-github-actions-demo-0.1.jar
+          java-version: 17
+      - name: Build with Maven
+        run: mvn -B package --file pom.xml
