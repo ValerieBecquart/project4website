@@ -30,17 +30,6 @@
     <header class="">
                 <img src="../img/banner.png" alt="logo" class="img-fluid">
     </header>
-<!--&lt;!&ndash;    over dit spel&ndash;&gt;-->
-<!--    <section id="over" class="content-section pb-5 pt-5 bg-primary">-->
-<!--        <div class="container text-center">-->
-<!--            <div class="content-section-heading text-center">-->
-<!--                <h1 class="mb-0 ">Wat is het?</h1>-->
-<!--                <div class="mb-5 ">-->
-<!--                    <small></small>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </section>-->
 
 <!--    speel spel-->
     <section id="speelspel" class="content-section pb-5 pt-5 bg-secondary">
@@ -56,7 +45,7 @@
     </section>
 
 <!--feedback-->
-    <section id="feedback" class="content-section pb-5 pt-5 bg-primary">
+    <section id="feedback" class="content-section pb-3 pt-5 bg-primary">
         <div class="container text-center">
             <h1 class="mb-0 text-white">Geef feedback</h1>
             <span th:if="${sendmessage.isEmpty}">
@@ -64,52 +53,52 @@
                 <small class="text-white">Deel je ervaring! </small>
             </div>
 
-            <form action="/" method="post">
-                <label >Deel jouw spelrating  (1 = niet leuk, 5 = heel leuk) </label>
+            <form action="/" method="post" class="border px-5 pt-3 bg-light">
+                <label  class="text-white" >Deel jouw spelrating  (1 = niet leuk, 5 = heel leuk) </label>
 
-                <div class="d-flex justify-content-around w-100">
-                    <span><input type="radio"  name="score" id="1"  value="1" required>
-                        <label for="1">1</label></span>
-                  <span> <input type="radio" name="score" id="2"  value="2">
-                      <label for="2" >2</label></span>
-                  <span>  <input type="radio" name="score"  id="3"  value="3">
-                      <label for="3">3</label></span>
-                <span>    <input type="radio" name="score"  id="4"  value="4">
-                    <label for="4" >4</label></span>
-                <span>   <input type="radio" name="score" id="5" value="5">
-                    <label for="5">5</label></span>
+                <div class="d-flex justify-content-around m-auto w-100">
+                    <span><input type="radio"  name="score" id="1"  value="1" required  class="text-white">
+                        <label for="1"  class="text-white">1</label></span>
+                  <span> <input type="radio" name="score" id="2"  value="2"  class="text-white">
+                      <label for="2"  class="text-white">2</label></span>
+                  <span>  <input type="radio" name="score"  id="3"  value="3"  class="text-white">
+                      <label for="3"  class="text-white">3</label></span>
+                <span>    <input type="radio" name="score"  id="4"  value="4"  class="text-white">
+                    <label for="4"  class="text-white" >4</label></span>
+                <span>   <input type="radio" name="score" id="5" value="5"  class="text-white">
+                    <label for="5" class="text-white">5</label></span>
             </div>
 
 
                 <p></p>
                 <p></p>
 
-                <p><label for="game">Wat vond je van het spel? Hoe de informatie gebracht wordt?</label> <br>
-                    <textarea class="w-100" rows="5" cols="60" name="game" id="game" placeholder="Typ hier jouw feedback"></textarea>
+                <p class="mt-4"><label for="game"  class="text-white">Wat vond je van het spel? Hoe de informatie gebracht wordt?</label> <br>
+                    <textarea class="w-100  " rows="5" cols="60" name="game" id="game" placeholder="Typ hier jouw feedback"></textarea>
                     <br/></p>
 
                 <p></p>
                 <p></p>
 
-                <p><label for="content">Wat vond je van de content?</label> <br>
-                    <textarea class="w-100" rows="5" cols="60" name="content" id="content" placeholder="Typ hier jouw feedback"></textarea>
+                <p class="mt-4"><label for="content"  class="text-white">Wat vond je van de content?</label> <br>
+                    <textarea class="w-100  " rows="5" cols="60" name="content" id="content" placeholder="Typ hier jouw feedback"></textarea>
                     <br/></p>
 
                 <p></p>
                 <p></p>
 
-                <p><label for="visuals">Wat vond je van de visuals? Sprak de vormgeving jouw aan? </label> <br>
-                    <textarea class="w-100" rows="5" cols="60" name="visuals" id="visuals" placeholder="Typ hier jouw feedback"></textarea>
+                <p class="mt-4"><label for="visuals"  class="text-white">Wat vond je van de visuals? Sprak de vormgeving jou aan? </label> <br>
+                    <textarea class="w-100  " rows="5" cols="60" name="visuals" id="visuals" placeholder="Typ hier jouw feedback"></textarea>
                     <br/></p>
                 <p></p>
                 <p></p>
 
-                <p><label for="other">Verder aanvullingen:  </label> <br>
-                    <textarea class="w-100" rows="2" cols="60" name="other" id="other" placeholder="Typ hier jouw feedback"></textarea>
+                <p class="mt-4"><label for="other"  class="text-white">Verder aanvullingen:  </label> <br>
+                    <textarea class="w-100  " rows="5" cols="60" name="other" id="other" placeholder="Typ hier jouw feedback"></textarea>
                     <br/></p>
 
 
-                <p><input type="submit" value="Verzend"/></p>
+                <p class="mt-4"><input type="submit" class="btn btn-secondary bg-primary bg-dark btn-md w-50" value="Verzend"/></p>
             </form>
     </span>
 
