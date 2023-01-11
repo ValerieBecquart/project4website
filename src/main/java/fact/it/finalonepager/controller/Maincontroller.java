@@ -6,6 +6,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.client.RestTemplate;
 
@@ -26,7 +27,7 @@ public class Maincontroller {
     }
 
 
-    @RequestMapping("/sendfeedback")
+    @PostMapping("/")
     public String getfeedback(Model model, HttpServletRequest request) {
         //make model
         String visuals= request.getParameter("visuals");
