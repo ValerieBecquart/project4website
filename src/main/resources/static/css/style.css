@@ -55,3 +55,15 @@ form{
     border-radius: 0.7em; /* or 50% width & line-height */
 
 }
+
+.attribute {
+    font-size: 0.5em;
+    font-style: italic;
+    color: #b2b2b2;
+text-align: right;
+margin:auto;
+}
+a, a:hover, a:focus {
+
+    color: #b2b2b2;
+}
