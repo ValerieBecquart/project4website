@@ -26,6 +26,11 @@ public class Maincontroller {
         return "index";
     }
 
+    @RequestMapping("/analyse")
+    private String analyse() {
+        return "analytics";
+    }
+
 
 
 
