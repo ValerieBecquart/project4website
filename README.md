@@ -11,19 +11,18 @@ Besides hosting the game, the web application can also gather feedback from the 
 feedback form, and also a general score can be given. The form data is sent to the `feedback-service` which stores it in a `mongodb` database.
 
 ## Analytics
-You have the possibility to consult data that is generated while playing the game using graphs made in Qlik sense. These are loaded onto the page also by using iframes. 
-This page can only be accessed by adding `/analyse` to the URL.
+You have the possibility to consult data that is generated while by the users. The data is visualised with dashboards made in Qlik sense. These are then loaded onto the page using iframes. 
 
 Two types of data are made available: 
 
 1. Analytical data on visits to each station
 
-The game gathers information on how many visits were made at each station, and takes into account the interests that visitors indicated at the start of the game. 
+The game gathers information on how many visits were made at each station, and takes into account the interests that visitors indicated at the start of the game. The data can be accessed only by adding `/analyse` to the base URL.
 
 [Foto toevoegen]
 
 2. Feedback sent by the users
 
-Feedback entered by the users is also displayed. Feedback from the users can be used to further improve the game.
+Feedback entered by the users is also displayed. Feedback from the users can be used to further improve the game. The data can be accessed only by adding `/feedback` to the base URL.
 
 [Foto toevoegen]
