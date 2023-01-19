@@ -20,6 +20,10 @@ Two types of data are made available:
 
 The game gathers information on how many visits were made at each station, and takes into account the interests that visitors indicated at the start of the game. 
 
+[Foto toevoegen]
+
 2. Feedback sent by the users
 
 Feedback entered by the users is also displayed. Feedback from the users can be used to further improve the game.
+
+[Foto toevoegen]
