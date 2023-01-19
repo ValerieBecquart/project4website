@@ -19,10 +19,10 @@ Two types of data are made available:
 
 The game gathers information on how many visits were made at each station, and takes into account the interests that visitors indicated at the start of the game. The data can be accessed only by adding `/analyse` to the base URL.
 
-[Foto toevoegen]
+![image](https://user-images.githubusercontent.com/74854941/213555054-f102d079-c629-4445-aded-2e68d1e4fe2e.png)
 
 2. Feedback sent by the users
 
 Feedback entered by the users is also displayed. Feedback from the users can be used to further improve the game. The data can be accessed only by adding `/feedback` to the base URL.
 
-[Foto toevoegen]
+![image](https://user-images.githubusercontent.com/74854941/213555151-4bde2fff-7dd2-42b8-a6a7-580aae6bfd28.png)
