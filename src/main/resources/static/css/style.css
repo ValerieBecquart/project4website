@@ -26,6 +26,10 @@
     color: #0D1F2D !important;
 }
 
+.qlik {
+    margin: 50px;
+}
+
 h1,h2,h3{
     font-family: 'Istok Web', sans-serif;
     font-size: 35px;

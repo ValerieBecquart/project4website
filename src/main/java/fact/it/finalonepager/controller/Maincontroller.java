@@ -31,6 +31,11 @@ public class Maincontroller {
         return "analytics";
     }
 
+    @RequestMapping("/feedback")
+    private String feedback() {
+        return "feedback";
+    }
+
 
 
 
