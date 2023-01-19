@@ -1,8 +1,8 @@
-#Utopia 2.0 Web Application
+# Utopia 2.0 Web Application
 The game Utopia 2.0 is made available and can be played through this web application built with Java and the Spring Boot framework. Docker and Okteto were used to host the application. 
 It can be accessed through the following link: https://utopia-utopiasite-kevinvandeputte-tm.cloud.okteto.net/
 
-##Game
+## Game
 Since the game is built in a WebGL format, we were able to load it using an iframe. Hosting however, has not been done using Docker and Okteto because the build would not
 allow it. Instead we used Netlify to host the game, and then load it on the web app. The repository used can be found [here](https://github.com/ValerieBecquart/unitybuild), and 
 the game itself can be accessed through [this](https://cozy-baklava-a40b81.netlify.app/) link.
@@ -10,7 +10,7 @@ the game itself can be accessed through [this](https://cozy-baklava-a40b81.netli
 Besides hosting the game, the web application can also gather feedback from the user after playing the game. Different aspects of the game can be judged in a 
 feedback form, and also a general score can be given. The form data is sent to the `feedback-service` which stores it in a `mongodb` database.
 
-##Analytics
+## Analytics
 You have the possibility to consult data that is generated while playing the game using graphs made in Qlik sense. These are loaded onto the page also by using iframes. 
 This page can only be accessed by adding `/analyse` to the URL.
 
