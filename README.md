@@ -3,7 +3,7 @@ The game Utopia 2.0 is made available and can be played through this web applica
 It can be accessed through the following link: https://utopia-utopiasite-kevinvandeputte-tm.cloud.okteto.net/
 
 ## Game
-Since the game is built in a WebGL format, we were able to load it using an iframe. Hosting however, has not been done using Docker and Okteto because the build would not
+Since the game is built in a WebGL format, we were able to load it using an iframe. Hosting of the game itself however, has not been done using Docker and Okteto because the build would not
 allow it. Instead we used Netlify to host the game, and then load it on the web app. The repository used can be found [here](https://github.com/ValerieBecquart/unitybuild), and 
 the game itself can be accessed through [this](https://cozy-baklava-a40b81.netlify.app/) link.
 
