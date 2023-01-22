@@ -14,10 +14,7 @@ import org.springframework.web.client.RestTemplate;
 public class Maincontroller {
     @Autowired
     private RestTemplate template;
-    private String baseurl = "https://feedback-service-vanbroekhovenstef.cloud.okteto.net/";
-
-
-
+    private String baseurl = "https://feedback-service-utopia-kevinvandeputte-tm.cloud.okteto.net/";
 
     @RequestMapping("/")
     private String index(Model model) {
@@ -36,12 +33,6 @@ public class Maincontroller {
         return "feedback";
     }
 
-
-
-
-
-
-
     @PostMapping("/")
     public String getfeedback(Model model, HttpServletRequest request) {
         //make model
@@ -53,10 +44,10 @@ public class Maincontroller {
         int score=
                 Integer.parseInt(request.getParameter("score"));
 
-//send model to api
+        //send model to api
         Feedbackmodel feedback = new Feedbackmodel(game,visuals,content,other,score);
         String uri = baseurl + "feedback";
-        Feedbackmodel result = template.postForObject(uri, feedback, Feedbackmodel.class);
+        template.postForObject(uri, feedback, Feedbackmodel.class);
 
         model.addAttribute("feedback","true");
         model.addAttribute("sendmessage","De feedback is verzonden");

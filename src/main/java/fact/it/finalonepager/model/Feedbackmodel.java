@@ -1,7 +1,6 @@
 package fact.it.finalonepager.model;
 
 public class Feedbackmodel {
-private int id;
     private String game; //feedback game setup
     private String visuals; //feedback visuals
     private String content; //feedback content
